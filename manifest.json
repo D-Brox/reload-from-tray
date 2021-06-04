@@ -1,0 +1,7 @@
+{
+    "name": "Reload From Tray",
+    "description": "Restart or reload discord from the tray.",
+    "author": "D Brox",
+    "version": "1.0.0",
+    "license": "MIT"
+}
