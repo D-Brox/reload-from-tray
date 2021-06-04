@@ -21,7 +21,7 @@ module.exports = class TrayRestart extends Plugin {
             else if (id=='reload') location.reload();
         };
         
-        ipcRenderer.on('DISCORD_RELAUNCH_APPLICATION', relaunchTray);
+        ipcRenderer.on('DISCORD_LAUNCH_APPLICATION', relaunchTray);
 
         tray.setSystemTrayApplications(customTrayItems);
     }
@@ -29,7 +29,7 @@ module.exports = class TrayRestart extends Plugin {
     pluginWillUnload () {
         uninject('reload-from-tray');
         if (typeof relaunchTray === 'function') {
-            ipcRenderer.removeListener('DISCORD_RELAUNCH_APPLICATION', relaunchTray);
+            ipcRenderer.removeListener('DISCORD_LAUNCH_APPLICATION', relaunchTray);
         }
         tray.setSystemTrayApplications([]);
     }
