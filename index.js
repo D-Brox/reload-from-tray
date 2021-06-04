@@ -6,8 +6,8 @@ const { inject, uninject } = require('powercord/injector');
 const tray = getModule([ 'setSystemTrayApplications' ], false);
 
 const customTrayItems = [
-  {name: "Restart Discord",id: 'relaunch'},
-  {name: "Reload Discord",id: 'reload'},
+  {name: "Reload",id: 'reload'},
+  {name: "Relaunch",id: 'relaunch'}
 ];
 
 let relaunchTray
