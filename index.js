@@ -1,7 +1,7 @@
 const { Plugin } = require('powercord/entities');
 
 const { ipcRenderer } = require('electron');
-const { getModule, i18n: { Messages } } = require('powercord/webpack');
+const { getModule } = require('powercord/webpack');
 const { inject, uninject } = require('powercord/injector');
 const tray = getModule([ 'setSystemTrayApplications' ], false);
 
